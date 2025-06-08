@@ -1,20 +1,50 @@
 # genignore.sh
 
-Generate a perfect .gitignore file for any project using [gitignore.io](https://www.toptal.com/developers/gitignore) in seconds.
+> Instantly generate a tailored `.gitignore` for any tech stack using [gitignore.io](https://www.toptal.com/developers/gitignore).
+
+---
+
+## Features
+
+- Supports all languages, frameworks, and tools listed on gitignore.io
+- Appends or overwrites existing `.gitignore`
+- Backs up your current `.gitignore` before changes
+- Fast, dependency-free (just needs `curl` and `bash`)
+- Help and usage info built in
+
+---
 
 ## Usage
 
+Make it executable:
 ```bash
-./genignore.sh python,node,linux
-``` 
+chmod +x genignore.sh
+```
 
-Replace python,node,linux with your tech stack.
+Generate a new .gitignore for Python, Node, and Visual Studio Code:
+```bash
+./genignore.sh python,node,visualstudiocode
+```
 
-Full keyword list: https://www.toptal.com/developers/gitignore
+Show help:
+```bash
+./genignore.sh --help
+```
 
-Features
-Super fast, no dependencies except curl
+What does it do?
+Fetches the best practice .gitignore from gitignore.io based on your keywords
 
-Overwrites existing .gitignore
+Backs up your old .gitignore to .gitignore.bak
 
-Perfect for every git-based project
+Overwrites or appends as you wish
+
+Supported Keywords
+Browse all supported platforms and keywords here:
+https://www.toptal.com/developers/gitignore
+
+
+
+## Example 
+```bash
+./genignore.sh python,django,linux,macos
+```
